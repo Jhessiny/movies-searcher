@@ -7,7 +7,7 @@ const SearchFormComponent = ({ handleSearchSubmit }) => {
     <SearchForm action="" className="search-movie-form">
       <input
         type="text"
-        placeholder="Nome do Filme"
+        placeholder="Movie Name"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
