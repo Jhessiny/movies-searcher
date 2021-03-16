@@ -1,7 +1,12 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import SearchFormComponent from "../components/SearchForm";
+import MovieModalComponent from "../components/MovieModal";
 
 export default function Home() {
+  const [movie, setMovie] = useState(null);
+  const router = useRouter();
   const handleSearchSubmit = async (e, value) => {
     e.preventDefault();
     console.log(value);
@@ -10,6 +15,19 @@ export default function Home() {
     );
     const result = await res.json();
     console.log(result);
+    setMovie(result);
+    router.push(
+      {
+        pathname: "/",
+        query: { id: result.imdbID },
+      },
+      undefined,
+      { shallow: true }
+    );
+  };
+
+  const handleCloseClick = () => {
+    setMovie(null);
   };
 
   return (
@@ -30,6 +48,12 @@ export default function Home() {
           <h2> Encontre o seu filme preferido aqui!</h2>
           <SearchFormComponent handleSearchSubmit={handleSearchSubmit} />
         </div>
+        {movie && (
+          <MovieModalComponent
+            handleCloseClick={handleCloseClick}
+            movie={movie}
+          />
+        )}
       </main>
     </div>
   );

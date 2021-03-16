@@ -11,7 +11,12 @@ const SearchFormComponent = ({ handleSearchSubmit }) => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button onClick={(e) => handleSearchSubmit(e, search)}>
+      <button
+        onClick={(e) => {
+          handleSearchSubmit(e, search);
+          setSearch("");
+        }}
+      >
         <i className="fas fa-search"></i>
       </button>
     </SearchForm>
