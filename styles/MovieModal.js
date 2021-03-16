@@ -22,7 +22,11 @@ export const MovieModal = styled.div`
         padding: 1rem;
       }
     }
-    .modal-card__info {
+
+    &__error {
+      padding: 0 2rem 2rem 2rem;
+    }
+    &__info {
       padding: 2rem 2rem;
       position: relative;
       color: #333;

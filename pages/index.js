@@ -16,6 +16,9 @@ export default function Home() {
     const result = await res.json();
     console.log(result);
     setMovie(result);
+    if (!result.Title) {
+      return;
+    }
     router.push(
       {
         pathname: "/",
@@ -28,6 +31,13 @@ export default function Home() {
 
   const handleCloseClick = () => {
     setMovie(null);
+    router.push(
+      {
+        pathname: "/",
+      },
+      undefined,
+      { shallow: true }
+    );
   };
 
   return (

@@ -9,17 +9,25 @@ const MovieModalComponent = ({ handleCloseClick, movie }) => {
             <i className="fas fa-times"></i>
           </button>
         </div>
-        <img src={movie.Poster} alt="" />
-        <div className="modal-card__info">
-          <h2>{movie.Title}</h2>
-          <p>{movie.Genre}</p>
-          <div className="modal-card__info__see-more">
-            <i class="fas fa-eye"></i>
-            <div className="modal-card__info__see-more__msg">
-              Ver mais Informações
+        {movie.Title ? (
+          <>
+            <img src={movie.Poster} alt="" />
+            <div className="modal-card__info">
+              <h2>{movie.Title}</h2>
+              <p>{movie.Genre}</p>
+              <div className="modal-card__info__see-more">
+                <i class="fas fa-eye"></i>
+                <div className="modal-card__info__see-more__msg">
+                  Ver mais Informações
+                </div>
+              </div>
             </div>
+          </>
+        ) : (
+          <div className="modal-card__error">
+            <p>{movie.Error}</p>
           </div>
-        </div>
+        )}
       </div>
     </MovieModal>
   );
