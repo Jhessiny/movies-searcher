@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import SearchFormComponent from "../components/SearchForm";
 import MovieModalComponent from "../components/MovieModal";
+import NextHead from "../components/Layout/NextHead";
 
 export default function Home() {
   const [movie, setMovie] = useState(null);
@@ -41,16 +42,7 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Movies' searcher | Home</title>
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-          crossorigin="anonymous"
-        />
-      </Head>
+      <NextHead title="Movies' searcher | Home" />
       <main>
         <div className="search-form-wrapper">
           <h2>Find your favorite movie here!</h2>

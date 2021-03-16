@@ -1,20 +1,11 @@
-import Head from "next/head";
 import Link from "next/link";
+import NextHead from "../../components/Layout/NextHead";
 import { Movie } from "../../styles/MoviePage";
 
 const MoviePage = ({ movie }) => {
   return (
     <div>
-      <Head>
-        <title>Movies' searcher | Movie Details</title>
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-          crossorigin="anonymous"
-        />
-      </Head>
+      <NextHead title="Movies' searcher | Movie Details" />
       <Movie>
         <h2>
           <Link href="/">
