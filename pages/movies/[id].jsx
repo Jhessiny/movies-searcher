@@ -40,13 +40,14 @@ const MoviePage = ({ movie }) => {
             <p>
               <span className="bold">Ratings:</span>{" "}
             </p>
-            <p>
-              {movie.Ratings.map((rt) => (
-                <p>
-                  {rt.Source} - {rt.Value}
-                </p>
-              ))}
-            </p>
+            <div>
+              {movie.Ratings &&
+                movie.Ratings.map((rt, index) => (
+                  <p key={index}>
+                    {rt.Source} - {rt.Value}
+                  </p>
+                ))}
+            </div>
           </div>
         </div>
       </Movie>
@@ -60,7 +61,6 @@ MoviePage.getInitialProps = async (ctx) => {
     `http://www.omdbapi.com/?apikey=e1e12212&i=${movieId}`
   );
   const movie = await res.json();
-  console.log(movie);
   return { movie };
 };
 

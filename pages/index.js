@@ -15,7 +15,6 @@ export default function Home() {
     );
     const result = await res.json();
     setMovie(result);
-    console.log(result);
     if (!result.Title) {
       return;
     }
