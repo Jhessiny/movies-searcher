@@ -61,7 +61,7 @@ const MoviePage = ({ movie }) => {
 export async function getServerSideProps(ctx) {
   const movieId = ctx.query.id;
   const res = await fetch(
-    `http://www.omdbapi.com/?apikey=e1e12212&i=${movieId}`
+    `https://www.omdbapi.com/?apikey=e1e12212&i=${movieId}`
   );
   const movie = await res.json();
   return { props: { movie: movie } };

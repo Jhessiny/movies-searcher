@@ -10,7 +10,7 @@ export default function Home() {
   const handleSearchSubmit = async (e, value) => {
     e.preventDefault();
     const res = await fetch(
-      `http://www.omdbapi.com/?apikey=e1e12212&t=${value}`
+      `httpsgit://www.omdbapi.com/?apikey=e1e12212&t=${value}`
     );
     const result = await res.json();
     setMovie(result);
