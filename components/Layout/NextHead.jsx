@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-const NextHead = ({ title }) => {
+const NextHead = ({ title, iconDir }) => {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+      <link rel="shortcut icon" href={iconDir} type="image/x-icon" />
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"

@@ -5,7 +5,10 @@ import { Movie } from "../../styles/MoviePage";
 const MoviePage = ({ movie }) => {
   return (
     <div>
-      <NextHead title="Movies' searcher | Movie Details" />
+      <NextHead
+        title="Movies' searcher | Movie Details"
+        iconDir="../favicon.png"
+      />
       <Movie>
         <h2>
           <Link href="/">
@@ -55,13 +58,13 @@ const MoviePage = ({ movie }) => {
   );
 };
 
-MoviePage.getInitialProps = async (ctx) => {
+export async function getServerSideProps(ctx) {
   const movieId = ctx.query.id;
   const res = await fetch(
     `http://www.omdbapi.com/?apikey=e1e12212&i=${movieId}`
   );
   const movie = await res.json();
-  return { movie };
-};
+  return { props: { movie: movie } };
+}
 
 export default MoviePage;

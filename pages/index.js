@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import SearchFormComponent from "../components/SearchForm";
@@ -41,7 +40,7 @@ export default function Home() {
 
   return (
     <div>
-      <NextHead title="Movies' searcher | Home" />
+      <NextHead title="Movies' searcher | Home" iconDir="favicon.png" />
       <main>
         <div className="search-form-wrapper">
           <h2>Find your favorite movie here!</h2>
