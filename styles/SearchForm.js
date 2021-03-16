@@ -18,4 +18,8 @@ export const SearchForm = styled.form`
   button {
     width: 10%;
   }
+
+  @media (max-width: 430px) {
+    width: 28rem;
+  }
 `;

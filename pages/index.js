@@ -43,8 +43,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Movies' searcher | Home</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -54,7 +52,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="search-form-wrapper">
-          <h2> Encontre o seu filme preferido aqui!</h2>
+          <h2>Find your favorite movie here!</h2>
           <SearchFormComponent handleSearchSubmit={handleSearchSubmit} />
         </div>
         {movie && (

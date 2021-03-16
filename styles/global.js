@@ -9,10 +9,12 @@ export const GlobalStyle = createGlobalStyle`
 }
 html{
   font-size: 62.5%;
-  min-height: 100vh;
+
+ 
   body {
     background-color: rgb(237, 109, 41);
-   
+    min-height: 100vh;
+    position: relative;
     background: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
@@ -41,6 +43,7 @@ html{
       }
     }
     main{
+      
       .search-form-wrapper{
         height: 30rem;
         background-color: rgb(0, 0, 255);
@@ -48,6 +51,7 @@ html{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+       
         h2{
           color: rgb(244, 172, 18)
         }
@@ -56,5 +60,16 @@ html{
   }
 
 }
+
+@media (max-width: 430px) {
+    body{
+      main{
+        h2{
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+  }
   
 `;

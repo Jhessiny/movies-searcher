@@ -20,7 +20,7 @@ const MovieModalComponent = ({ handleCloseClick, movie }) => {
               <div className="modal-card__info__see-more">
                 <Link href={"/movies/" + movie.imdbID}>
                   <a className="modal-card__see-more-icon">
-                    <i class="fas fa-eye"></i>
+                    <i className="fas fa-eye"></i>
                   </a>
                 </Link>
 
