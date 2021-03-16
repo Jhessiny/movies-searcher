@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { MovieModal } from "../styles/MovieModal";
 
 const MovieModalComponent = ({ handleCloseClick, movie }) => {
@@ -16,9 +18,14 @@ const MovieModalComponent = ({ handleCloseClick, movie }) => {
               <h2>{movie.Title}</h2>
               <p>{movie.Genre}</p>
               <div className="modal-card__info__see-more">
-                <i class="fas fa-eye"></i>
+                <Link href={"/movies/" + movie.imdbID}>
+                  <a className="modal-card__see-more-icon">
+                    <i class="fas fa-eye"></i>
+                  </a>
+                </Link>
+
                 <div className="modal-card__info__see-more__msg">
-                  Ver mais Informações
+                  See more information
                 </div>
               </div>
             </div>

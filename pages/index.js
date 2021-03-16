@@ -9,13 +9,12 @@ export default function Home() {
   const router = useRouter();
   const handleSearchSubmit = async (e, value) => {
     e.preventDefault();
-    console.log(value);
     const res = await fetch(
       `http://www.omdbapi.com/?apikey=e1e12212&t=${value}`
     );
     const result = await res.json();
-    console.log(result);
     setMovie(result);
+    console.log(result);
     if (!result.Title) {
       return;
     }

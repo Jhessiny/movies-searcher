@@ -13,6 +13,9 @@ export const MovieModal = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    img {
+      width: 100%;
+    }
 
     .modal-close {
       text-align: right;
@@ -20,6 +23,16 @@ export const MovieModal = styled.div`
         background-color: transparent;
         border: none;
         padding: 1rem;
+      }
+    }
+
+    &__see-more-icon {
+      color: #444;
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover + .modal-card__info__see-more__msg {
+        display: block;
       }
     }
 
@@ -35,19 +48,14 @@ export const MovieModal = styled.div`
         right: 0;
         top: 0;
         padding: 0 1rem;
-        .fa-eye:hover {
-          cursor: pointer;
-        }
-        .fa-eye:hover + .modal-card__info__see-more__msg {
-          display: block;
-        }
+
         &__msg {
           position: absolute;
           width: 20rem;
           right: -10rem;
           top: -3rem;
           background-color: #fff;
-          padding: 0 0.5rem;
+          padding: 0.5rem 0.5rem;
           box-shadow: 3px 3px 3px #888;
           display: none;
         }
