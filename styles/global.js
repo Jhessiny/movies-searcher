@@ -12,7 +12,7 @@ html{
   min-height: 100vh;
   body {
     background-color: rgb(237, 109, 41);
-    background-color: rgb(32, 1, 255);
+   
     background: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
@@ -38,6 +38,19 @@ html{
       p{
         margin-bottom: .3rem;
        
+      }
+    }
+    main{
+      .search-form-wrapper{
+        height: 30rem;
+        background-color: rgb(0, 0, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+          color: rgb(244, 172, 18)
+        }
       }
     }
   }
